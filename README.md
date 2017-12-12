@@ -4,9 +4,9 @@ Author : Amit Narkhede
 
 This repository is for interview with RedHat UXD team.
 
-**Open Ended Questions : **
+# Open Ended Questions :
 
-Section 1 - Design & Development
+## Section 1 - Design & Development
 
 ```
 1. Could you outline what you would consider to be the important considerations If you were
@@ -23,5 +23,7 @@ asked to develop a web application that could potentially be used by thousands o
 ```
 2. What techniques do you employ to keep up-to-date with the rapid pace of progress in the
 field frontend development? How do you choose which technologies are worth taking the
-time to learn more about?```
+time to learn more about?
+```
+
 - Honestly I haven't worked that long in frontend technologies to give a very impressive answer to this question. I tend to follow people and engineering blogs on medium, same on YouTube. I spend good amount of time on reddit and follow good chunk of subreddits that will keep me up to date in terms of new things in the field. I was lucky enough to have great mentors in my internship from whom I have learned a lot in terms of overall though process, best practices to use.
