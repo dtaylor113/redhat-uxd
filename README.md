@@ -27,3 +27,21 @@ time to learn more about?
 ```
 
 - Honestly I haven't worked that long in frontend technologies to give a very impressive answer to this question. I tend to follow people and engineering blogs on medium, same on YouTube. I spend good amount of time on reddit and follow good chunk of subreddits that will keep me up to date in terms of new things in the field. I was lucky enough to have great mentors in my internship from whom I have learned a lot in terms of overall though process, best practices to use.
+
+## Section 2 - Testing & Deployment
+
+```
+1. Describe the approach you take in testing your applications.
+```
+
+- As a developer, I tend to write good amount of unit tests which will cover all the different branches and lines of code.
+- To come up with test cases, I look at all the possible inputs that can be provided to the code that I'm testing. This includes expected normal input, corner cases. I also believe that we need unit tests to check for behavior of code when unexpected input is provided.
+- Automated tests will definitely do the job but I also tend to check the components individually and along with other components that its coupled with. This usually helps to look out for minor visual glitches that might occur and also behavior of the code on different browsers.
+- I believe in releasing a stable product than a rushed one with more features along with bugs. Thus we should definitely have a good time left for the manual integration testing that covers the things that we are changing in the release and flow around it. This enables me to find unnecessary side effects of new changes.
+
+
+```
+2. What do you value in a code base?
+```
+
+-
