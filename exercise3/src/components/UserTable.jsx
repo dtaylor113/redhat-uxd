@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ReactTable from 'react-table';
-import userFetchList from '../actions/UserActions';
+import { withRouter } from 'react-router-dom';
+import { userFetchList } from '../actions/UserActions';
 import beautifyAddress from '../utils';
 
 export class UserTable extends Component {
@@ -20,11 +21,12 @@ export class UserTable extends Component {
   }
 
   tableEventHandler(_, rowInfo) {
-    const { dispatch } = this.props;
+    const { history } = this.props;
     return {
       onClick: (e, handleOriginal) => {
         console.log('A Td Element was clicked!');
         console.log('It was in this row:', rowInfo);
+        history.push(`/user/${rowInfo.original.id}`);
 
         if (handleOriginal) {
           handleOriginal();
@@ -86,6 +88,7 @@ export class UserTable extends Component {
 
 UserTable.propTypes = {
   dispatch: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
   users: PropTypes.object
 };
 
@@ -97,4 +100,4 @@ const mapStateToProps = state => ({
   users: state.users,
 });
 
-export default connect(mapStateToProps)(UserTable);
+export default connect(mapStateToProps)(withRouter(UserTable));
