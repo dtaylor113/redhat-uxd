@@ -63,3 +63,29 @@ time to learn more about?
 ```
 
 - Man this is going to be hard putting down into words. I will try my best. I started as someone who didn't knew how to turn on computer in 2009 and now I'm graduating in computer science. This has been tremendous journey throughout and I have enjoyed it for most of the part. In general I'm proud of how I have grown as a person. The decisions that I have made throughout have mostly been in right direction and have paid off (including getting into the industry, doing Masters, internships).
+
+
+# Practical Exercises :
+```
+Exercise 1
+```
+- The issue in the code was that the both the functions assigning variables were going through event loop and thus async call. The synchronous return was executed way before those initializations.
+- Quick fix for this was to have that return as timeout call, but this was not optimal as it depended on delay of other timeouts.
+- I converted functions to use Promise instead that made sure that callback happens when the expected data has arrived.
+- For running this code, `node exercise1.js\exercise1.js`
+
+```
+Exercise 2
+```
+- I'm going to be honest that I don't have much experience in CSS and thus struggled a bit on this one. The solution is still not perfect though.
+- The one that is in the repo is using css3 flexbox.
+- For running this, you just need to open `box.html` in a browser.
+
+```
+Exercise 3
+```
+- I have used React/ Redux/ Webpack to build this one.
+- I have also used `eslint` extending rules from `airbnb` style guide.
+- This one is working properly but as of writing this, you can't bookmark the user details page.
+- Currently there are no automated tests for this. I will try to work on those and get those checked in.
+- configuring this can be done using `npm install` and then running `npm run dev`
