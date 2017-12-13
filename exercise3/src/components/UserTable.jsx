@@ -7,11 +7,30 @@ import beautifyAddress from '../utils';
 
 export class UserTable extends Component {
 
+  constructor() {
+    super();
+    this.tableEventHandler = this.tableEventHandler.bind(this);
+  }
+
   componentDidMount() {
     const { users, dispatch } = this.props;
     if (!users.loaded) {
       dispatch(userFetchList());
     }
+  }
+
+  tableEventHandler(_, rowInfo) {
+    const { dispatch } = this.props;
+    return {
+      onClick: (e, handleOriginal) => {
+        console.log('A Td Element was clicked!');
+        console.log('It was in this row:', rowInfo);
+
+        if (handleOriginal) {
+          handleOriginal();
+        }
+      }
+    };
   }
 
   render() {
@@ -21,40 +40,43 @@ export class UserTable extends Component {
       return <h1>Loading...</h1>;
     }
 
+    const columns = [
+      {
+        columns: [
+          {
+            Header: 'Name',
+            id: 'fullName',
+            accessor: d => d.name
+          },
+          {
+            Header: 'Username',
+            id: 'username',
+            accessor: d => d.username
+          },
+          {
+            Header: 'Username',
+            id: 'email',
+            width: 250,
+            accessor: d => d.email
+          },
+          {
+            Header: 'Address',
+            id: 'addres',
+            width: 400,
+            accessor: d => beautifyAddress(d.address)
+          }
+        ]
+      },
+    ];
+
     return (
       <div>
         <ReactTable
           data={users.usersData}
-          columns={[
-            {
-              columns: [
-                {
-                  Header: 'Name',
-                  id: 'fullName',
-                  accessor: d => d.name
-                },
-                {
-                  Header: 'Username',
-                  id: 'username',
-                  accessor: d => d.username
-                },
-                {
-                  Header: 'Username',
-                  id: 'email',
-                  width: 250,
-                  accessor: d => d.email
-                },
-                {
-                  Header: 'Address',
-                  id: 'addres',
-                  width: 400,
-                  accessor: d => beautifyAddress(d.address)
-                }
-              ]
-            },
-          ]}
+          columns={columns}
           defaultPageSize={10}
           className="-striped -highlight"
+          getTdProps={this.tableEventHandler}
         />
         <br />
       </div>
