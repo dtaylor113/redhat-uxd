@@ -61,3 +61,5 @@ time to learn more about?
 ```
 2. In your career to date, what are you most proud of and why?
 ```
+
+- Man this is going to be hard putting down into words. I will try my best. I started as someone who didn't knew how to turn on computer in 2009 and now I'm graduating in computer science. This has been tremendous journey throughout and I have enjoyed it for most of the part. In general I'm proud of how I have grown as a person. The decisions that I have made throughout have mostly been in right direction and have paid off (including getting into the industry, doing Masters, internships).
