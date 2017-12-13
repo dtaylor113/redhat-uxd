@@ -77,6 +77,7 @@ export class UserTable extends Component {
           data={users.usersData}
           columns={columns}
           defaultPageSize={10}
+          showPagination={false}
           className="-striped -highlight"
           getTdProps={this.tableEventHandler}
         />

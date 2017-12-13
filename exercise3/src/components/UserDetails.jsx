@@ -8,20 +8,19 @@ export class UserDetails extends Component {
   componentDidMount() {
     const { user, match, dispatch } = this.props;
     if (!user.loaded) {
-      dispatch(userFetch(match.id));
+      dispatch(userFetch(match.params.id));
     }
   }
 
   render() {
     const { user } = this.props;
-
     if (!user.loaded) {
       return <h1>Loading...</h1>;
     }
 
     return (
       <div>
-        {user}
+        Hello
       </div>
     );
   }
@@ -40,7 +39,7 @@ UserDetails.defaultProps = {
 };
 
 const select = state => ({
-  user: state.users.user,
+  user: state.user,
 });
 
 export default connect(select)(UserDetails);
