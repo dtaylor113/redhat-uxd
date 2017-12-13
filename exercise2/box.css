@@ -53,12 +53,12 @@ th, td { padding: 5px; } /* cellpadding */
   text-decoration: none;
 }
 
-.itemDiv {;
+.itemEle {;
   display: block;
   padding: 5px;
 }
 
-.itemDiv > a {
+.itemEle > a {
   color: white;
 }
 
@@ -92,15 +92,16 @@ th, td { padding: 5px; } /* cellpadding */
   .navbar-list {
     flex-wrap: wrap;
   }
-  .icon {
-    order: 0 !important;
-  }
+
   .product-name {
-    order: 1 !important;
+    order: 0 !important;
     width: 100%;
-    margin: 15px;
+    text-align: center;
   }
   .navbar-items {
-    order: 2 !important flex-direction: column !important;
+    order: 1 !important;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
   }
 }
