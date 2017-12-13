@@ -9,9 +9,9 @@ export default function users(state = { loaded: false }, action) {
     case USER_FETCH_LIST:
       return state;
     case USER_FETCH_LIST_SUCCESS:
-      return { ...state, users: action.data, loaded: true };
+      return { ...state, usersData: action.data, loaded: true };
     case USER_FETCH_LIST_FAILURE:
-      return { ...state, users: action.err, loaded: false };
+      return { ...state, usersData: action.err, loaded: false };
     default:
       return state;
   }

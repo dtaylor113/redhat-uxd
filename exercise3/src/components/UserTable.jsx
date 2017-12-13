@@ -21,49 +21,37 @@ export class UserTable extends Component {
       return <h1>Loading...</h1>;
     }
 
-    const userData = users.users.results;
-    console.log(userData);
-
     return (
       <div>
         <ReactTable
-          data={userData}
+          data={users.usersData}
           columns={[
             {
-              Header: 'Name',
               columns: [
                 {
-                  Header: 'First Name',
-                  id: 'firstName',
-                  accessor: d => d.name.first
+                  Header: 'Name',
+                  id: 'fullName',
+                  accessor: d => d.name
                 },
                 {
-                  Header: 'Last Name',
-                  id: 'lastName',
-                  accessor: d => d.name.last
-                }
-              ]
-            },
-            {
-              columns: [
+                  Header: 'Username',
+                  id: 'username',
+                  accessor: d => d.username
+                },
                 {
-                  Header: 'Email',
+                  Header: 'Username',
                   id: 'email',
-                  minWidth: 250,
+                  width: 250,
                   accessor: d => d.email
-                }
-              ]
-            },
-            {
-              columns: [
+                },
                 {
                   Header: 'Address',
-                  id: 'address',
-                  minWidth: 450,
-                  accessor: d => beautifyAddress(d.location)
+                  id: 'addres',
+                  width: 400,
+                  accessor: d => beautifyAddress(d.address)
                 }
               ]
-            }
+            },
           ]}
           defaultPageSize={10}
           className="-striped -highlight"

@@ -1,4 +1,4 @@
  const beautifyAddress = location =>
-  `${location.street}, ${location.city}, ${location.state}, ${location.postcode}`;
+  `${location.suite}, ${location.street}, ${location.city}, ${location.zipcode}`;
 
  export default beautifyAddress;
