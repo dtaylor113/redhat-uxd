@@ -44,4 +44,20 @@ time to learn more about?
 2. What do you value in a code base?
 ```
 
--
+- As a developer I value overall code structure (less coupled and more cohesive), code readability (no spaghetti code!), and as less technical debt as possible.
+- If its structured properly as said in previous point, it would be more adaptable to future changes in terms of frameworks, tools.
+- Unless the code is properly code reviewed, it should never be committed to main branch.
+- Code should follow best practices for the language/framework that is being used. During my internship, I came across linters and I love how they make my life easier to not worry about things after done.
+
+## Section 3 - Testing & Deployment
+```
+1. What do you find most exciting or interesting about working in the software development field?
+```
+
+- As recently tech has been increasingly contributing to our day to day work, it feels great to be on other side of creating things.
+- Any technology usually has its own peak time, but being software developer you will always find some complex problem that needs to be solved. This alone is exciting to me.
+- Being a tech enthusiast, what better field I be in? I mean we are looking at future where we don't need to drive, we are making trips to different planets, our phones are more powerful than ever.
+
+```
+2. In your career to date, what are you most proud of and why?
+```
